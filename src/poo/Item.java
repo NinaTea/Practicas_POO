@@ -16,10 +16,6 @@ public class Item {
     }
     public boolean canItBeSold(Date expirationDate){
         Date today = new Date();
-        if (expirationDate.after(today)){
-            return false;
-        } else {
-            return true;
-        }
+        return expirationDate.after(today);
     }
 }
